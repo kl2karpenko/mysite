@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/main.css"/>
+
+    <script src="src/vendor/require.min.js"></script>
+    <script src="config.js"></script>
+    <script src="src/bootstrap.js"></script>
+
+</head>
+<body ng-app="App">
+
+
+<div class="site-wrapper">
+
+    <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+            <div class="masthead clearfix">
+                <div class="inner">
+                    <h3 class="masthead-brand">kl2Karpenko</h3>
+                    <nav>
+                        <ul class="nav masthead-nav">
+                            <li class="active"><a ng-href="/">Home</a></li>
+                            <li><a ng-href="/api">API</a></li>
+                            <li><a ng-href="/contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="inner cover">
+                <div ng-view></div>
+            </div>
+
+            <div class="mastfoot">
+                <div class="inner">
+                    <p><b class="text-success">kl2kaprenko</b> @ 2015, all rights reserved</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>
