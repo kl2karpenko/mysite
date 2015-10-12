@@ -1,8 +1,8 @@
 require.config({
 	baseUrl: "/public",
 	paths: {
-		'angular': "/src/vendor/angular.min",
-		'angular-route': '/src/vendor/ang-router',
+		'angular': "/src/vendor/angular",
+		'router': '/src/vendor/ang-router',
 		'angularAMD': '/src/vendor/angular-amd.min',
 		'modules': '/src/modules',
 		'app': '/src/app',
@@ -10,10 +10,16 @@ require.config({
 	},
 	shim: {
 		'angularAMD': ['angular'],
-		'angular-route': ['angular'],
+		'router': {
+			exports: 'router',
+			deps: ['angular']
+		},
 		'bootstrap': ['bootstrap'],
-		"angular": {
-			"exports": "angular"
+		'angular': {
+			exports: 'angular'
+		},
+		'angularAMD': {
+			exports: 'angularAMD'
 		}
 	},
 	deps: ['app']

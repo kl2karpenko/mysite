@@ -3,7 +3,7 @@ var
 	app = express(),
 	bodyParser = require('body-parser'),
 	port = 2006,
-	publicDir = process.argv[2] || __dirname + '/public';
+	publicDir = __dirname + '/public';
 
 
 var methodOverride = require('method-override');
