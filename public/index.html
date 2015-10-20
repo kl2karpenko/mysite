@@ -6,6 +6,7 @@
 
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/main.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
     <script src="src/vendor/require.min.js"></script>
     <script src="config.js"></script>
@@ -25,10 +26,8 @@
                 <div class="inner">
                     <h3 class="masthead-brand"><a ng-href="/">kl2Karpenko</a></h3>
                     <nav>
-                        <ul class="nav masthead-nav">
-                            <li class="active"><a ng-href="/">Home</a></li>
-                            <li><a ng-href="/api">API</a></li>
-                            <li><a ng-href="/contact">Contact</a></li>
+                        <ul class="nav masthead-nav" ng-controller="NavCtrl">
+                            <li ng-repeat="items in navItems" ng-class="getActiveClass(items.url)"><a href={{items.url}}>{{items.name}}</a></li>
                         </ul>
                     </nav>
                 </div>

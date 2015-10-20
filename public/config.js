@@ -6,6 +6,7 @@ require.config({
 		'angularAMD': '/src/vendor/angular-amd.min',
 		'modules': '/src/modules',
 		'app': '/src/app',
+		'lib': '/src/lib',
 		'bootstrap': '/src/vendor/bootstrap.min'
 	},
 	shim: {
@@ -17,9 +18,6 @@ require.config({
 		'bootstrap': ['bootstrap'],
 		'angular': {
 			exports: 'angular'
-		},
-		'angularAMD': {
-			exports: 'angularAMD'
 		}
 	},
 	deps: ['app']
